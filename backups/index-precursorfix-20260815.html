@@ -401,16 +401,10 @@ footer a{color:var(--ink-dim)}
 /* 🏝️ the island is your pointer — you carry Esmeralda around the archive
    (Shaka's touch, Jul 25). hotspot = the island's rocky root-tip at the
    bottom, so what you point at is never covered. desktop cursors only;
-   text fields keep the I-beam, Drive's iframe keeps its own.
-   GLITCH FIX (Shaka report, Aug 15 — PIT BOY): the island used to flicker —
-   bare body/section gaps fell back to the arrow, and every class carrying
-   cursor:pointer (buttons, cards, chips — ~2000 elements) outranked this
-   selector by specificity, stealing the island on hover. now html/body
-   carry it too, and !important keeps the island steady everywhere. */
+   text fields keep the I-beam, Drive's iframe keeps its own. */
 @media (hover:hover) and (pointer:fine){
-  html,body{cursor:url('assets/island-cursor.png') 18 38,default}
   body *:not(input):not(textarea):not(select){
-    cursor:url('assets/island-cursor.png') 18 38,pointer !important;
+    cursor:url('assets/island-cursor.png') 18 38,pointer;
   }
 }
 </style>
