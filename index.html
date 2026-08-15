@@ -406,11 +406,16 @@ footer a{color:var(--ink-dim)}
    bare body/section gaps fell back to the arrow, and every class carrying
    cursor:pointer (buttons, cards, chips — ~2000 elements) outranked this
    selector by specificity, stealing the island on hover. now html/body
-   carry it too, and !important keeps the island steady everywhere. */
+   carry it too, and !important keeps the island steady everywhere.
+   ART FIX (Shaka round 2, Aug 15): the old island-cursor.png was a detailed
+   painting crushed to 37x40 — mush + ragged alpha fringe at mouse size =
+   "glitchy". replaced with the official EDGE CITY ISLAND cursor (32x32
+   crisp silhouette + dark halo, same asset as PatagoniaPIT canon Jul 28,
+   hotspot 16 31 = the island's bottom tip). old art kept in assets/. */
 @media (hover:hover) and (pointer:fine){
-  html,body{cursor:url('assets/island-cursor.png') 18 38,default}
+  html,body{cursor:url('assets/edge-island-cursor.png') 16 31,default}
   body *:not(input):not(textarea):not(select){
-    cursor:url('assets/island-cursor.png') 18 38,pointer !important;
+    cursor:url('assets/edge-island-cursor.png') 16 31,pointer !important;
   }
 }
 </style>
